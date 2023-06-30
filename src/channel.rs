@@ -2,6 +2,7 @@ use std::sync::mpsc::{sync_channel, Receiver, SyncSender};
 
 use crate::linked_blocking_queue::LinkedBlockingQueue;
 
+#[derive(Clone)]
 pub struct Channel<T> {
     queue: LinkedBlockingQueue<T>,
 }

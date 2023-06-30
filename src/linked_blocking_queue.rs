@@ -2,6 +2,7 @@ use std::sync::{Arc, Mutex, Condvar};
 use std::collections::VecDeque;
 use std::thread;
 
+#[derive(Clone)]
 pub struct LinkedBlockingQueue<T> {
     queue: Arc<(Mutex<VecDeque<T>>, Condvar)>,
 }

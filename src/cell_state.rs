@@ -1,3 +1,4 @@
+#[derive(Clone)]
 pub struct CellState {
     pub row: i32,
     pub col: i32,
